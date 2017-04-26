@@ -6,4 +6,5 @@ import Home from './Home';
 import Intro from './Intro';
 import SignIn from './SignIn';
 import SignUp from './SignUp';
-export { Home, Intro, SignIn, SignUp }
+import Dashboard from './Dashboard';
+export { Home, Intro, SignIn, SignUp, Dashboard }

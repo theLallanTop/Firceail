@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Home, Intro, SignIn, SignUp } from './containers';
+import { Home, Intro, SignIn, SignUp, Dashboard } from './containers';
 import { Text, View } from 'react-native';
 import { connect } from 'react-redux';
 import NavigationDrawer from './NavigationDrawer';
@@ -8,7 +8,7 @@ import { Router, Scene, Actions as NavigationActions } from 'react-native-router
 
 const Styles = {
   navBar: {
-    backgroundColor: Colors.background,
+    backgroundColor: Colors.bloodOrange,
     borderBottomWidth: null,
   },
   titleTextStyle: {
@@ -34,15 +34,14 @@ export default class AppRouter extends Component {
           hideNavBar={false}
           backButtonImage={{}}
         >
-          <Scene key="intro" component={Intro} initial />
-          <Scene key="signin" component={SignIn} hideNavBar={true} />
-          <Scene key="signup" component={SignUp} hideNavBar={true} />
-          <Scene key="drawer" component={NavigationDrawer} type="replace" >
-            <Scene key="drawerChildrenWrapper"  >
-              <Scene key="home" component={Home} title="Firceail" hideNavBar={true}  />
+          <Scene key="drawer" component={NavigationDrawer} hideNavBar={false} type="replace" >
+            <Scene key="drawerChildrenWrapper">
+              <Scene key="dashboard" component={Dashboard} title="Firceail" hideNavBar={false} />
             </Scene>
           </Scene>
-
+          <Scene key="intro" component={Intro} hideNavBar={true} initial />
+          <Scene key="signin" component={SignIn} hideNavBar={true} />
+          <Scene key="signup" component={SignUp} hideNavBar={true} />
         </ Router>
     );
   }

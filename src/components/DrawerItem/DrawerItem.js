@@ -4,12 +4,14 @@
 import React, { Component } from 'react';
 import { View, Text } from 'react-native';
 import { } from '../../theme';
-
+import styles from './DrawerStyle';
 export default class DrawerItem extends Component {
   render(){
     return(
-      <View style={{ }}>
-        <Text>Hello</Text>
+      <View style={styles.DrawerContainer}>
+        <View style={styles}>
+          <Text>Hello</Text>
+        </View>
       </View>
     );
   }
