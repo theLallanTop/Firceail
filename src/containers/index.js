@@ -3,5 +3,7 @@
  */
 
 import Home from './Home';
-
-export { Home }
+import Intro from './Intro';
+import SignIn from './SignIn';
+import SignUp from './SignUp';
+export { Home, Intro, SignIn, SignUp }

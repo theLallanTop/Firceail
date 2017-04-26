@@ -9,31 +9,31 @@ const helvetica = {
   bold: 'HelveticaNeue-Bold',
   emphasis: 'HelveticaNeue-Italic'
 };
-const raleway = {
+const Roboto = {
   ...Platform.select({
     ios: {
-      base: 'Raleway',
-      bold: 'Raleway-Bold',
-      emphasis: 'HelveticaNeue-Italic',
-      extraBold: 'Raleway-ExtraBold',
-      extraLight: 'Raleway-ExtraLight',
-      heavy: 'Raleway-Heavy',
-      light: 'Raleway-Light',
-      medium: 'Raleway-Medium',
-      semiBold: 'Raleway-SemiBold',
-      thin: 'Raleway-Thin'
+      base: 'Roboto',
+      bold: 'Roboto-Bold',
+      emphasis: 'Roboto-Italic',
+      extraBold: 'Roboto-ExtraBold',
+      extraLight: 'Roboto-ExtraLight',
+      heavy: 'Roboto-Heavy',
+      light: 'Roboto-Light',
+      medium: 'Roboto-Medium',
+      semiBold: 'Roboto-SemiBold',
+      thin: 'Roboto-Thin'
     },
     android: {
-      base: 'Raleway-Regular',
-      bold: 'Raleway-Bold',
-      emphasis: 'HelveticaNeue-Italic',
-      extraBold: 'Raleway-ExtraBold',
-      extraLight: 'Raleway-ExtraLight',
-      heavy: 'Raleway-Heavy',
-      light: 'Raleway-Light',
-      medium: 'Raleway-Medium',
-      semiBold: 'Raleway-SemiBold',
-      thin: 'Raleway-Thin'
+      base: 'Roboto-Regular',
+      bold: 'Roboto-Bold',
+      emphasis: 'Roboto-Italic',
+      extraBold: 'Roboto-ExtraBold',
+      extraLight: 'Roboto-ExtraLight',
+      heavy: 'Roboto-Heavy',
+      light: 'Roboto-Light',
+      medium: 'Roboto-Medium',
+      semiBold: 'Roboto-SemiBold',
+      thin: 'Roboto-Thin'
     }
   }),
 
@@ -54,6 +54,6 @@ const size = {
 }
 export default {
   helvetica,
-  raleway,
+  Roboto,
   size
 }

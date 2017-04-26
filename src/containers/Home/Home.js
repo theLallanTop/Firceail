@@ -8,7 +8,7 @@ export default class Home extends Component {
 
   render() {
     return (
-      <View style={{flex:1,flexDirection:'column', alignItems:'center', marginTop: Metrics.navBarHeight}}>
+      <View style={{flex:1, flexDirection:'column', alignItems:'center', marginTop: Metrics.navBarHeight}}>
         <Text>Home Page</Text>
       </View>
     );
