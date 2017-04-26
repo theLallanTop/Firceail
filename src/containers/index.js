@@ -7,4 +7,5 @@ import Intro from './Intro';
 import SignIn from './SignIn';
 import SignUp from './SignUp';
 import Dashboard from './Dashboard';
-export { Home, Intro, SignIn, SignUp, Dashboard }
+import Setting from './Setting';
+export { Home, Intro, SignIn, SignUp, Dashboard, Setting }

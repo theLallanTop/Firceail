@@ -8,6 +8,9 @@ export default StyleSheet.create({
   DrawerContainer: {
     flex: 1,
   },
-  navDraver
+  navDraver:{
+    backgroundColor: Colors.bloodOrange,
+    height: Metrics.navBarHeight
+  }
 
 });

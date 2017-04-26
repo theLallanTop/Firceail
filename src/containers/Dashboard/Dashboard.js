@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { View, Text } from 'react-native';
 import { Container, Content, Footer, FooterTab, Button } from 'native-base';
 import styles from './DashboardStyle';
-
+import { Actions as NavActions } from 'react-native-router-flux';
 export default class Dashboard extends Component {
 
   constructor(){
@@ -68,6 +68,7 @@ export default class Dashboard extends Component {
       isProfileActive: false,
       isSettingActive: true,
     });
+    NavActions.Account();
   };
 
 }

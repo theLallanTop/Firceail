@@ -80,7 +80,7 @@ export default class Intro extends Component{
   }
   onPressSignIn = () => {
     this.setState({ isSegment: !this.state.isSegment });
-    NavActions.drawer();
+    NavActions.signin();
   };
 
   onPressSignUp = () => {
