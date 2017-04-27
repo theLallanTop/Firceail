@@ -40,11 +40,11 @@ export default class DrawerItem extends Component {
     console.log('on press',text);
     switch (text){
       case 'Home':{
-        NavActions.refresh({key: 'drawer', open: value => !value });
+        NavActions.dashboard();
         break;
       }
       case 'Profile':{
-        // NavActions.signin();
+          NavActions.profile();
         break;
       }
       default:{

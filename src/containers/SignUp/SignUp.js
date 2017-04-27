@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
-import { Colors, Images } from '../../theme';
+import { Colors, Images, Metrics } from '../../theme';
 import styles from './SignUpStyle';
-import { Container, Header, Title, Content, Button, Icon, List, ListItem, InputGroup, Input, Picker, Thumbnail } from 'native-base';
-
+import { Container, Content, Button, Icon, List, ListItem, InputGroup, Input, Picker, Thumbnail } from 'native-base';
+import { Actions as NavActions } from 'react-native-router-flux';
 const Item = Picker.Item;
 const camera = Images.drawericon;
 
@@ -29,10 +29,13 @@ export default class SignUp extends Component {
 
   render(){
     return(
-      <Container style={styles.container}>
+      <Container style={{ backgroundColor: Colors.silver }}>
+        <TouchableOpacity style={{ marginTop:40, marginLeft: 15, width: 100, height: 60 }} onPress={this.onPressBack}>
+          <Icon style={{ width: 30, height: 20 }} name='ios-arrow-round-back'/>
+        </TouchableOpacity>
         <Content>
           <TouchableOpacity>
-            <Thumbnail size={80} source={camera} style={{ alignSelf: 'center', marginTop: 20, marginBottom: 10 }} />
+            <Thumbnail size={80} source={camera} style={{ alignSelf: 'center', marginBottom: 10 }} />
           </TouchableOpacity>
           <List>
             <ListItem>
@@ -97,4 +100,9 @@ export default class SignUp extends Component {
       </Container>
     );
   }
+
+  onPressBack = () => {
+    NavActions.pop();
+  };
+
 }

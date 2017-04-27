@@ -5,6 +5,7 @@ import React, { Component } from 'react';
 import { View, Text } from 'react-native';
 import { Container, Content } from 'native-base';
 import { Metrics } from '../../theme';
+
 export default class Home extends Component {
 
   render() {

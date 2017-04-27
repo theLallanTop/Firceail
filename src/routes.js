@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Home, Intro, SignIn, SignUp, Dashboard, Setting } from './containers';
+import { Home, Intro, SignIn, SignUp, Dashboard, Profile } from './containers';
 import { Text, View } from 'react-native';
 import { connect } from 'react-redux';
 import NavigationDrawer from './NavigationDrawer';
@@ -34,15 +34,17 @@ export default class AppRouter extends Component {
           hideNavBar={false}
           backButtonImage={{}}
         >
-          <Scene key="drawer" component={NavigationDrawer} hideNavBar={false} type="replace" open={false}>
+          <Scene key="drawer" component={NavigationDrawer} hideNavBar={false} type="replace">
             <Scene key="drawerChildrenWrapper" tabs>
               <Scene key="dashboard" component={Dashboard} title="Firceail" hideNavBar={false} />
+              <Scene key="profile" component={Profile} title="Profile" hideNavBar={false} />
             </Scene>
           </Scene>
 
           <Scene key="intro" component={Intro} hideNavBar={true} initial />
           <Scene key="signin" component={SignIn} hideNavBar={true} />
           <Scene key="signup" component={SignUp} hideNavBar={true} />
+
         </ Router>
     );
   }
