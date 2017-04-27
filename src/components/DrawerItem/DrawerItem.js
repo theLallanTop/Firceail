@@ -1,6 +1,7 @@
 /**
  * Created by ph-266 on 24/04/17.
  */
+
 import React, { Component } from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
 import { Colors, Fonts, Images } from '../../theme';

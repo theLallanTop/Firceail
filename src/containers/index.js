@@ -8,5 +8,5 @@ import SignIn from './SignIn';
 import SignUp from './SignUp';
 import Dashboard from './Dashboard';
 import Setting from './Setting';
-
-export { Home, Intro, SignIn, SignUp, Dashboard, Setting }
+import Profile from './Profile';
+export { Home, Intro, SignIn, SignUp, Dashboard, Setting, Profile }
