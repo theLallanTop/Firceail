@@ -34,14 +34,12 @@ export default class AppRouter extends Component {
           hideNavBar={false}
           backButtonImage={{}}
         >
-          <Scene key="drawer" component={NavigationDrawer} hideNavBar={false} type="replace" >
+          <Scene key="drawer" component={NavigationDrawer} hideNavBar={false} type="replace" open={false}>
             <Scene key="drawerChildrenWrapper" tabs>
               <Scene key="dashboard" component={Dashboard} title="Firceail" hideNavBar={false} />
-              <Scene key="Account" component={Setting} />
-              <Scene key="Messages" component={Setting} />
             </Scene>
           </Scene>
-
+          <Scene key="setting" component={Setting} />
           <Scene key="intro" component={Intro} hideNavBar={true} initial />
           <Scene key="signin" component={SignIn} hideNavBar={true} />
           <Scene key="signup" component={SignUp} hideNavBar={true} />

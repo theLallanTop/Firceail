@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { View, Text } from 'react-native';
-import { Container, Content, Footer, FooterTab, Button } from 'native-base';
+import { Container, Content, Footer, FooterTab, Tab, Tabs, Button, TabHeading } from 'native-base';
 import styles from './DashboardStyle';
+import { Setting } from '../../containers';
+import { Metrics } from '../../theme';
 import { Actions as NavActions } from 'react-native-router-flux';
 export default class Dashboard extends Component {
 
@@ -14,10 +16,24 @@ export default class Dashboard extends Component {
 
   render(){
     return(
-      <Container>
-        <Content/>
+      <Container style={{ marginTop: 15 }}>
+        <Tabs initialPage={0} ref={(tabView) => {this.tabView = tabView}} tabBarUnderlineStyle={{opacity: 0}}>
+          <Tab heading={<TabHeading />}>
+            <View padder><Text>Apps</Text></View>
+          </Tab>
+          <Tab heading={<TabHeading />}>
+            <View padder><Text>Camera</Text></View>
+          </Tab>
+          <Tab heading={<TabHeading />}>
+            <View padder><Text>Profile</Text></View>
+          </Tab>
+          <Tab heading={<TabHeading />}>
+            <Setting />
+          </Tab>
+        </Tabs>
+
         <Footer >
-          <FooterTab>
+          <FooterTab >
             <Button active={this.state.isAppActive} onPress={this.onPressApp}>
               <Text>Apps</Text>
             </Button>
@@ -43,7 +59,7 @@ export default class Dashboard extends Component {
       isProfileActive: false,
       isSettingActive: false,
     });
-
+    this.tabView.goToPage(0);
   };
   onPressCamera = () => {
     this.setState({
@@ -52,6 +68,7 @@ export default class Dashboard extends Component {
       isProfileActive: false,
       isSettingActive: false,
     });
+    this.tabView.goToPage(1);
   };
   onPressProfile = () => {
     this.setState({
@@ -60,6 +77,7 @@ export default class Dashboard extends Component {
       isProfileActive: true,
       isSettingActive: false,
     });
+    this.tabView.goToPage(2);
   };
   onPressSetting = () => {
     this.setState({
@@ -68,7 +86,7 @@ export default class Dashboard extends Component {
       isProfileActive: false,
       isSettingActive: true,
     });
-    NavActions.Account();
+    this.tabView.goToPage(3);
   };
 
 }

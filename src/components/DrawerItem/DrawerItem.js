@@ -6,8 +6,8 @@ import { View, Text, TouchableOpacity } from 'react-native';
 import { Colors, Fonts, Images } from '../../theme';
 import styles from './DrawerStyle';
 import { List, ListItem } from 'native-base';
-
-const button = ['Home','Profile','Share','About us','Setting','Log out']
+import { Actions as NavActions } from 'react-native-router-flux';
+const button = ['Home','Profile','Share','About us','Setting','Log out'];
 
 export default class DrawerItem extends Component {
   render(){
@@ -37,5 +37,18 @@ export default class DrawerItem extends Component {
 
   onPressDrawerItemButton = (text) => {
     console.log('on press',text);
+    switch (text){
+      case 'Home':{
+        NavActions.refresh({key: 'drawer', open: value => !value });
+        break;
+      }
+      case 'Profile':{
+        // NavActions.signin();
+        break;
+      }
+      default:{
+        break;
+      }
+    }
   }
 }
