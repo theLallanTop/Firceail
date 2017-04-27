@@ -4,7 +4,7 @@
 
 // leave off @2x/@3x
 const images = {
-  //logo: require('../images/logo.png')
+  logo: require('../images/hash.png'),
   drawericon: require('../images/DrawerIcon.png'),
   swipeintrofirst: require('../images/intro1.png'),
   swipeintrosec: require('../images/intro2.png'),

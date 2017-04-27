@@ -21,7 +21,9 @@ const colors = {
   fire: '#e73536',
   drawer: 'rgba(30, 30, 29, 0.95)',
   red: '#8B0000',
-  white: '#FFFFFF'
+  white: '#FFFFFF',
+
+  lightTeal: '#007FA7',
 };
 
 export default colors;

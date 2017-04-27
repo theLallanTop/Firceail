@@ -5,7 +5,7 @@ import styles from './SignUpStyle';
 import { Container, Content, Button, Icon, List, ListItem, InputGroup, Input, Picker, Thumbnail } from 'native-base';
 import { Actions as NavActions } from 'react-native-router-flux';
 const Item = Picker.Item;
-const camera = Images.drawericon;
+const camera = Images.logo;
 
 export default class SignUp extends Component {
 
@@ -40,32 +40,32 @@ export default class SignUp extends Component {
           <List>
             <ListItem>
               <InputGroup>
-                <Icon name="ios-person" style={{ color: '#0A69FE' }} />
+                <Icon name="ios-person" style={{ color: Colors.lightTeal }} />
                 <Input inlineLabel label="First Name" placeholder="First Name" />
               </InputGroup>
             </ListItem>
             <ListItem>
               <InputGroup>
-                <Icon name="ios-person" style={{ color: '#0A69FE' }} />
+                <Icon name="ios-person" style={{ color: Colors.lightTeal }} />
                 <Input inlineLabel label="Last Name" placeholder="Last Name" />
               </InputGroup>
             </ListItem>
 
             <ListItem>
               <InputGroup>
-                <Icon name="ios-mail" style={{ color: '#0A69FE' }} />
+                <Icon name="ios-mail" style={{ color: Colors.lightTeal }} />
                 <Input placeholder="EMAIL" />
               </InputGroup>
             </ListItem>
             <ListItem>
               <InputGroup>
-                <Icon name="ios-unlock" style={{ color: '#0A69FE' }} />
+                <Icon name="ios-unlock" style={{ color: Colors.lightTeal }} />
                 <Input placeholder="PASSWORD" secureTextEntry />
               </InputGroup>
             </ListItem>
             <ListItem>
               <InputGroup>
-                <Icon name="ios-call" style={{ color: '#0A69FE' }} />
+                <Icon name="ios-call" style={{ color: Colors.lightTeal }} />
                 <Input
                   placeholder="PHONE"
                   keyboardType="numeric"
@@ -73,7 +73,7 @@ export default class SignUp extends Component {
               </InputGroup>
             </ListItem>
             <ListItem iconLeft>
-              <Icon name="ios-transgender" style={{ color: '#0A69FE' }} />
+              <Icon name="ios-transgender" style={{ color: Colors.lightTeal }} />
               <Text>GENDER</Text>
               <Picker
                 iosHeader="Select one"
@@ -93,8 +93,8 @@ export default class SignUp extends Component {
               </InputGroup>
             </ListItem>
           </List>
-          <Button style={{ alignSelf: 'center', marginTop: 20, marginBottom: 20 }}>
-            <Text>Sign Up</Text>
+          <Button block style={{ margin: 20, backgroundColor: Colors.bloodOrange }} onPress={this.onPressSignUp}>
+            <Text style={{ fontSize: 20, color: Colors.white }}>Sign Up</Text>
           </Button>
         </Content>
       </Container>
@@ -103,6 +103,10 @@ export default class SignUp extends Component {
 
   onPressBack = () => {
     NavActions.pop();
+  };
+
+  onPressSignUp = () => {
+    NavActions.drawer();
   };
 
 }

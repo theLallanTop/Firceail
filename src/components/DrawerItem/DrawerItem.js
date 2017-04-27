@@ -8,7 +8,9 @@ import { Colors, Fonts, Images } from '../../theme';
 import styles from './DrawerStyle';
 import { List, ListItem } from 'native-base';
 import { Actions as NavActions } from 'react-native-router-flux';
+
 const button = ['Home','Profile','Share','About us','Setting','Log out'];
+
 
 export default class DrawerItem extends Component {
   render(){
@@ -26,7 +28,7 @@ export default class DrawerItem extends Component {
                 style={{flex: 1}}
                 onPress={() => this.onPressDrawerItemButton(item)}>
                 <View style={{ flex: 1, marginLeft: 5}}>
-                  <Text style={{ color: Colors.bloodOrange}}>{item}</Text>
+                 <Text style={{ color: Colors.bloodOrange}}>{item}</Text>
                 </View>
               </TouchableOpacity>
             </ListItem>
