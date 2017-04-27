@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { View, Text } from 'react-native';
 import { Container, Content, Footer, FooterTab, Tab, Tabs, Button, TabHeading } from 'native-base';
 import styles from './DashboardStyle';
-import { Setting } from '../../containers';
+import { Setting, Home } from '../../containers';
 import { Metrics } from '../../theme';
 import { Actions as NavActions } from 'react-native-router-flux';
 export default class Dashboard extends Component {
@@ -19,7 +19,7 @@ export default class Dashboard extends Component {
       <Container style={{ marginTop: 15 }}>
         <Tabs initialPage={0} ref={(tabView) => {this.tabView = tabView}} tabBarUnderlineStyle={{opacity: 0}}>
           <Tab heading={<TabHeading />}>
-            <View padder><Text>Apps</Text></View>
+            <Home />
           </Tab>
           <Tab heading={<TabHeading />}>
             <View padder><Text>Camera</Text></View>
@@ -35,7 +35,7 @@ export default class Dashboard extends Component {
         <Footer >
           <FooterTab >
             <Button active={this.state.isAppActive} onPress={this.onPressApp}>
-              <Text>Apps</Text>
+              <Text>Home</Text>
             </Button>
             <Button active={this.state.isCameraActive} onPress={this.onPressCamera}>
               <Text>Camera</Text>

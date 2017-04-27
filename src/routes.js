@@ -39,7 +39,7 @@ export default class AppRouter extends Component {
               <Scene key="dashboard" component={Dashboard} title="Firceail" hideNavBar={false} />
             </Scene>
           </Scene>
-          <Scene key="setting" component={Setting} />
+
           <Scene key="intro" component={Intro} hideNavBar={true} initial />
           <Scene key="signin" component={SignIn} hideNavBar={true} />
           <Scene key="signup" component={SignUp} hideNavBar={true} />
