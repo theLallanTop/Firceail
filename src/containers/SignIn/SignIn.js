@@ -4,7 +4,7 @@ import styles from './SignInStyle';
 import { Metrics, Images, Colors } from '../../theme';
 import { Container, Content, List, ListItem, InputGroup, Input, Button, Icon, Thumbnail } from 'native-base';
 import { Actions as NavActions } from 'react-native-router-flux';
-
+import { LoginWithFacebook } from '../../components';
 
 export default class SignIn extends Component{
   constructor(){
@@ -38,6 +38,13 @@ export default class SignIn extends Component{
           <Button block style={{ margin: 20, backgroundColor: Colors.bloodOrange }} onPress={this.onPressSignIn}>
             <Text style={{ fontSize: 20, color: Colors.white }}>Sign In</Text>
           </Button>
+          <View style={{ marginTop: 10, justifyContent: 'center', alignItems: 'center' }}>
+            <Text>Sign In with social</Text>
+          </View>
+          <View style={styles.facebookButtoViewStyle}>
+            <LoginWithFacebook />
+          </View>
+
         </Content>
       </Container>
     );

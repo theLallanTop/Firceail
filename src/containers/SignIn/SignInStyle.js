@@ -6,5 +6,10 @@ export default StyleSheet.create({
   signincontainer: {
     flex: 1,
     marginTop: Metrics.navBarHeight
-  }
+  },
+  facebookButtoViewStyle:{
+    flex: 1,
+    marginLeft: 20,
+    marginRight: 20
+  },
 })

@@ -10,10 +10,14 @@ import { List, ListItem } from 'native-base';
 import { Actions as NavActions } from 'react-native-router-flux';
 
 const button = ['Home','Profile','Share','About us','Setting','Log out'];
-
-
+// const Drawer = this.context.drawer;
 export default class DrawerItem extends Component {
+
+  static contextTypes = {
+    drawer: React.PropTypes.object,
+  };
   render(){
+    drawer = this.context.drawer;
     return(
       <View style={styles.DrawerContainer}>
         <View style={styles.navDraver} />
@@ -26,7 +30,7 @@ export default class DrawerItem extends Component {
               <TouchableOpacity
                 underlayColor={Colors.cloud}
                 style={{flex: 1}}
-                onPress={() => this.onPressDrawerItemButton(item)}>
+                onPress={() => {drawer.close(); this.onPressDrawerItemButton(item);}}>
                 <View style={{ flex: 1, marginLeft: 5}}>
                  <Text style={{ color: Colors.bloodOrange}}>{item}</Text>
                 </View>
@@ -46,7 +50,7 @@ export default class DrawerItem extends Component {
         break;
       }
       case 'Profile':{
-          NavActions.profile();
+        NavActions.profile();
         break;
       }
       default:{
